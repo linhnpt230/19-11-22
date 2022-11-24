@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'PT Sans Narrow', sans-serif;
+    background-color: #000;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+a{
+    text-decoration: none;
+}
+h1 {
+    font-weight: 700;
+    color: #64c6e1;
+    text-shadow: 0 0 6px rgba(202, 228, 255, 0.9);
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-family: 'Lobster', cursive;
+}
+
+.text {
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+}
+
+.letter {
+    opacity: 0;
+    visibility: hidden;
+    display: inline-block;
+    transform: translateX(-60px) rotate(180deg);
+    transition: all 0.1s linear;
+    font-size: 36px;
+    color: #b447cf;
+    text-shadow: 0 0 5px #2356ff;
+}
+
+@keyframes ziczac {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+.letter.appear {
+    opacity: 1;
+    visibility: visible;
+    animation: ziczac 0.4s linear;
+}
+.letter.go-down {
+    transform: translateX(0) rotate(0);
+}
